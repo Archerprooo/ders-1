@@ -7,4 +7,4 @@ try:
     print(abc.read())
     abc.close()
 except:
-    print("hata")
+    print("hata")                               
