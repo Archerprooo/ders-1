@@ -1,1 +1,0 @@
-{'ad': '& "C:/Program Files/Python310/python.exe" c:/Users/vektorel/ders-1/rehber_projesi.py', 'numara': '567577'},
