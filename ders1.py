@@ -1,16 +1,17 @@
 an = 1
 
 print ("1. basamak")
-def a():
+def birinci():
     an = 2
-    b ()
+    ikinci()
     print (an)
     print ("1. basamak")
-    def b():
+    def ikinci():
         print ("2. basamak")
         an = 3
+        print (an)
 
-a ()
+birinci()
 print (an)
 
 
