@@ -1,5 +1,16 @@
-c = input("adın ne : ")
-a = float(input(f" {c} doğum yılını gir : "))
-b = float(input(f" {c} şu anki yılı gir : "))
-print (f" {c} senin yaşın  {b-a}") 
+an = 1
+
+print ("1. basamak")
+def a():
+    an = 2
+    print (b)
+    print (an)
+    print ("1. basamak")
+    def b():
+        print ("2. basamak")
+        an = 3
+
+a ()
+print (an)
+
 
