@@ -3,7 +3,7 @@ an = 1
 print ("1. basamak")
 def a():
     an = 2
-    print (b)
+    b ()
     print (an)
     print ("1. basamak")
     def b():
