@@ -1,11 +1,16 @@
 from PyQt6.QtWidgets import *
 import sys
 def özelleştir():
+    dosya = open("profil_Bilgileri","w")
+    dosya.write("")
+    dosya.close()
+
     uygulama = QApplication([])
     pencere =QWidget()
 
 
     kalıp = QVBoxLayout()
+    pencere.setWindowTitle("Profil")
 
     kalıp.addWidget(QLineEdit('Kullanızı adınız...'))
     kalıp.addWidget(QLineEdit('Şifreniz...'))
