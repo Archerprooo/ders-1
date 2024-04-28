@@ -35,23 +35,25 @@ class özelleştir(QMainWindow):
         kalıp = QVBoxLayout()
         pencere.setWindowTitle("Profil")
 
-        self.edit1=QLineEdit('Kullanıcı adınız...')
+        kalıp.addWidget(QLabel('Kullanıcı Adınız?'))
+        self.edit1=QLineEdit()
         self.edit1.setFixedWidth(100)
         kalıp.addWidget(self.edit1)
-        self.edit2=QLineEdit('Şifreniz...')
+
+        kalıp.addWidget(QLabel('Şifreniz?'))
+        self.edit2=QLineEdit()
         self.edit2.setFixedWidth(100)
+        self.edit2.setEchoMode(QLineEdit.EchoMode.Password)
         kalıp.addWidget(self.edit2)
-        self.edit3=QLineEdit('Mailiniz...')
+
+        kalıp.addWidget(QLabel('Mailiniz?'))
+        self.edit3=QLineEdit()
         self.edit3.setFixedWidth(100)
         kalıp.addWidget(self.edit3)
 
-        kalıp.addWidget(QLabel('Doğum Tarihiniz'))
-        self.edit4=QScrollBar()
-        kalıp.addWidget(self.edit4)
-
         kalıp.addWidget(QLabel('Arka plan renginiz'))
-        self.edit5=QColorDialog()
-        kalıp.addWidget(self.edit5)
+        self.edit4=QColorDialog()
+        kalıp.addWidget(self.edit4)
         
         self.buton1= QPushButton('Tamamla')
         self.buton1.setFixedWidth(100)
