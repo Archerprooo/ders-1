@@ -1,28 +1,19 @@
 from PyQt6.QtWidgets import *
 import sys
 
-aa = QApplication([])
-ww =QWidget()
-ww1 =QWidget()
-
-icerik = QVBoxLayout()
-icerik2 = QHBoxLayout()
-
-icerik.addWidget(QPushButton('tıkla'))
-icerik.addWidget(QPushButton('dene'))
-icerik.addWidget(QLabel('Bilgi'))
-ww.setLayout(icerik)
-
-icerik2.addWidget(QPushButton('tıkla'))
-icerik2.addWidget(QPushButton('dene'))
-icerik2.addWidget(QLabel('Bilgi'))
+uygulama = QApplication([])
+pencere =QWidget()
 
 
-ww1.setLayout(icerik2)
+uygulama = QVBoxLayout()
 
-ww.show()
-ww1.show()
+uygulama.addWidget(QPushButton('Kullanızı adınız...'))
+uygulama.addWidget(QPushButton('Şifreniz...'))
 
-aa.exec()
+pencere.setLayout(uygulama)
+
+pencere.show()
+
+uygulama.exec()
 
 
