@@ -1,26 +1,26 @@
 from PyQt6.QtWidgets import *
 import sys
+def özelleştir():
+    uygulama = QApplication([])
+    pencere =QWidget()
 
-uygulama = QApplication([])
-pencere =QWidget()
 
+    kalıp = QVBoxLayout()
 
-kalıp = QVBoxLayout()
+    kalıp.addWidget(QLineEdit('Kullanızı adınız...'))
+    kalıp.addWidget(QLineEdit('Şifreniz...'))
+    kalıp.addWidget(QLineEdit('Mailiniz...'))
 
-kalıp.addWidget(QLineEdit('Kullanızı adınız...'))
-kalıp.addWidget(QLineEdit('Şifreniz...'))
-kalıp.addWidget(QLineEdit('Mailiniz...'))
+    kalıp.addWidget(QLabel('Doğum Tarihiniz'))
+    kalıp.addWidget(QScrollBar())
 
-kalıp.addWidget(QLabel('Doğum Tarihiniz'))
-kalıp.addWidget(QScrollBar())
+    kalıp.addWidget(QLabel('Arka plan renginiz'))
+    kalıp.addWidget(QColorDialog())
 
-kalıp.addWidget(QLabel('Arka plan renginiz'))
-kalıp.addWidget(QColorDialog())
+    pencere.setLayout(kalıp)
 
-pencere.setLayout(kalıp)
+    pencere.show()
 
-pencere.show()
-
-uygulama.exec()
-
+    uygulama.exec()
+özelleştir()
 
