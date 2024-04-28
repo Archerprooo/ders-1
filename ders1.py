@@ -5,12 +5,12 @@ uygulama = QApplication([])
 pencere =QWidget()
 
 
-uygulama = QVBoxLayout()
+kalıp = QVBoxLayout()
 
-uygulama.addWidget(QPushButton('Kullanızı adınız...'))
-uygulama.addWidget(QPushButton('Şifreniz...'))
+kalıp.addWidget(QPushButton('Kullanızı adınız...'))
+kalıp.addWidget(QPushButton('Şifreniz...'))
 
-pencere.setLayout(uygulama)
+pencere.setLayout(kalıp)
 
 pencere.show()
 
