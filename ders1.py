@@ -5,13 +5,12 @@ import sys
 class girisekrani(QMainWindow):
     def __init__(self):
         super().__init__()
-        def login():
-            print("tt")
-            self.close
-            pencereAna = özelleştir()
-            pencereAna.show()
         girişpenceresi = QWidget()
         Anaekran = QVBoxLayout()
+        def login():
+            print("tt")
+            pencereAna = özelleştir()
+            pencereAna.show()
           
             
         self.anabuton1= QPushButton('Profil')
@@ -29,28 +28,28 @@ class özelleştir(QMainWindow):
 
         pencere =QWidget()
         
-        kalıp = QVBoxLayout()
+        kalip = QVBoxLayout()
         pencere.setWindowTitle("Profil")
 
-        kalıp.addWidget(QLabel('Kullanıcı Adınız?'))
+        kalip.addWidget(QLabel('Kullanıcı Adınız?'))
         self.edit1=QLineEdit()
         self.edit1.setFixedWidth(100)
-        kalıp.addWidget(self.edit1)
+        kalip.addWidget(self.edit1)
 
-        kalıp.addWidget(QLabel('Şifreniz?'))
+        kalip.addWidget(QLabel('Şifreniz?'))
         self.edit2=QLineEdit()
         self.edit2.setFixedWidth(100)
         self.edit2.setEchoMode(QLineEdit.EchoMode.Password)
-        kalıp.addWidget(self.edit2)
+        kalip.addWidget(self.edit2)
 
-        kalıp.addWidget(QLabel('Mailiniz?'))
+        kalip.addWidget(QLabel('Mailiniz?'))
         self.edit3=QLineEdit()
         self.edit3.setFixedWidth(100)
-        kalıp.addWidget(self.edit3)
+        kalip.addWidget(self.edit3)
 
-        kalıp.addWidget(QLabel('Arka plan renginiz'))
+        kalip.addWidget(QLabel('Arka plan renginiz'))
         self.edit4=QColorDialog()
-        kalıp.addWidget(self.edit4)
+        kalip.addWidget(self.edit4)
         
         def onayla(self):
             pencere.showFullScreen()
@@ -61,20 +60,20 @@ class özelleştir(QMainWindow):
             pencere.close()
         self.buton1= QPushButton('Tamamla')
         self.buton1.setFixedWidth(100)
-        kalıp.addWidget(self.buton1)
+        kalip.addWidget(self.buton1)
         self.buton1.clicked.connect(onayla)
 
         self.buton2= QPushButton('çıkış')
         self.buton2.setFixedWidth(100)
-        kalıp.addWidget(self.buton2)
+        kalip.addWidget(self.buton2)
         self.buton2.clicked.connect(kapat)
 
 
         self.buton3= QPushButton('Tam ekran')
         self.buton3.setFixedWidth(100)
-        kalıp.addWidget(self.buton3)
+        kalip.addWidget(self.buton3)
         self.buton3.clicked.connect(tam_ekran)
-        pencere.setLayout(kalıp)
+        pencere.setLayout(kalip)
         self.setCentralWidget(pencere)        
 
 uygulama = QApplication([])
