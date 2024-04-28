@@ -10,6 +10,7 @@ class girişekranı(QMainWindow):
         
         def login():
             Anapencere = özelleştir()
+            özelleştir.show()
             
         self.anabuton1= QPushButton('Profil')
         self.anabuton1.setFixedWidth(100)
