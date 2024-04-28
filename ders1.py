@@ -16,6 +16,7 @@ class özelleştir(QMainWindow):
         pencere.setWindowTitle("Profil")
 
         self.edit1=QLineEdit('Kullanıcı adınız...')
+        self.edit1.setFixedWidth(50)
         kalıp.addWidget(self.edit1)
         self.edit2=QLineEdit('Şifreniz...')
         kalıp.addWidget(self.edit2)
@@ -29,6 +30,8 @@ class özelleştir(QMainWindow):
         kalıp.addWidget(QLabel('Arka plan renginiz'))
         self.edit5=QColorDialog()
         kalıp.addWidget(self.edit5)
+        self.edit6= QPushButton('Tamamla')
+        kalıp.addWidget(self.edit6)
 
         pencere.setLayout(kalıp)
 
