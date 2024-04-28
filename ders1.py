@@ -16,7 +16,8 @@ class özelleştir(QMainWindow):
         kalıp = QVBoxLayout()
         pencere.setWindowTitle("Profil")
 
-        kalıp.addWidget(QLineEdit('Kullanıcı adınız...'))
+        self.edit1=QLineEdit('Kullanıcı adınız...')
+        kalıp.addWidget(self.edit1)
         kalıp.addWidget(QLineEdit('Şifreniz...'))
         kalıp.addWidget(QLineEdit('Mailiniz...'))
 
@@ -29,8 +30,9 @@ class özelleştir(QMainWindow):
         pencere.setLayout(kalıp)
 
         pencere.show()
-
         uygulama.exec()
 
-özelleştir()
+
+pencere = özelleştir()
+
 
