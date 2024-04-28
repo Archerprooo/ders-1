@@ -6,15 +6,18 @@ Anaekran = QVBoxLayout()
 
 class özelleştir(QMainWindow):
     def __init__(self,xx="Başlıksız"):
-
+        def kapat(self):
+            self.pencere.showFullScreen()
+            print ("6")
+    
 
         uygulama = QApplication([])
-        pencere =QWidget()
+        self.pencere =QWidget()
         
 
 
         kalıp = QVBoxLayout()
-        pencere.setWindowTitle("Profil")
+        self.pencere.setWindowTitle("Profil")
 
         self.edit1=QLineEdit('Kullanıcı adınız...')
         self.edit1.setFixedWidth(100)
@@ -33,13 +36,14 @@ class özelleştir(QMainWindow):
         kalıp.addWidget(QLabel('Arka plan renginiz'))
         self.edit5=QColorDialog()
         kalıp.addWidget(self.edit5)
+        
         self.edit6= QPushButton('Tamamla')
         self.edit6.setFixedWidth(100)
         kalıp.addWidget(self.edit6)
-
-        pencere.setLayout(kalıp)
-
-        pencere.showFullScreen()
+        self.edit6.clicked.connect(self.kapat)
+        self.pencere.setLayout(kalıp)
+        
+        self.pencere.show()
         uygulama.exec()
 
 
