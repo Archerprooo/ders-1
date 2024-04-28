@@ -18,14 +18,18 @@ class özelleştir(QMainWindow):
 
         self.edit1=QLineEdit('Kullanıcı adınız...')
         kalıp.addWidget(self.edit1)
-        kalıp.addWidget(QLineEdit('Şifreniz...'))
-        kalıp.addWidget(QLineEdit('Mailiniz...'))
+        self.edit2=QLineEdit('Şifreniz...')
+        kalıp.addWidget(self.edit2)
+        self.edit3=QLineEdit('Mailiniz...')
+        kalıp.addWidget(self.edit3)
 
         kalıp.addWidget(QLabel('Doğum Tarihiniz'))
-        kalıp.addWidget(QScrollBar())
+        self.edit4=QScrollBar()
+        kalıp.addWidget(self.edit4)
 
         kalıp.addWidget(QLabel('Arka plan renginiz'))
-        kalıp.addWidget(QColorDialog())
+        self.edit5=QColorDialog()
+        kalıp.addWidget(self.edit5)
 
         pencere.setLayout(kalıp)
 
