@@ -1,45 +1,34 @@
 from PyQt6.QtWidgets import *
 import sys
-class girişekranı(QMainWindow):
-    def __init__(self,xx="Başlıksız"):
-        Anauygulama = QApplication([])
-        Anapencere = QWidget()
-        Anaekran = QVBoxLayout()
-        
 
-        
+
+class girisekrani(QMainWindow):
+    def __init__(self):
+        super().__init__()
         def login():
-            Anapencere = özelleştir()
-            özelleştir.show()
+            print("tt")
+            self.close
+            pencereAna = özelleştir()
+            pencereAna.show()
+        girişpenceresi = QWidget()
+        Anaekran = QVBoxLayout()
+          
             
         self.anabuton1= QPushButton('Profil')
         self.anabuton1.setFixedWidth(100)
         Anaekran.addWidget(self.anabuton1)
         self.anabuton1.clicked.connect(login)
-        Anapencere.setLayout(Anaekran)
-        
-        
-        
-        Anapencere.show()
-        Anauygulama.exec()
+        girişpenceresi.setLayout(Anaekran)
+        self.setCentralWidget(girişpenceresi)
+
 
 
 class özelleştir(QMainWindow):
-    
     def __init__(self,xx="Başlıksız"):
-        
-        def onayla(self):
-            pencere.showFullScreen()
-        def tam_ekran(self):
-            pencere.showFullScreen()
-        def kapat(self):
-            pencere.close()
+        super().__init__()
 
-        uygulama = QApplication([])
         pencere =QWidget()
         
-
-
         kalıp = QVBoxLayout()
         pencere.setWindowTitle("Profil")
 
@@ -63,17 +52,22 @@ class özelleştir(QMainWindow):
         self.edit4=QColorDialog()
         kalıp.addWidget(self.edit4)
         
+        def onayla(self):
+            pencere.showFullScreen()
+        def tam_ekran(self):
+            pencere.showFullScreen()
+        def kapat(self):
+            
+            pencere.close()
         self.buton1= QPushButton('Tamamla')
         self.buton1.setFixedWidth(100)
         kalıp.addWidget(self.buton1)
         self.buton1.clicked.connect(onayla)
-        pencere.setLayout(kalıp)
 
         self.buton2= QPushButton('çıkış')
         self.buton2.setFixedWidth(100)
         kalıp.addWidget(self.buton2)
         self.buton2.clicked.connect(kapat)
-        pencere.setLayout(kalıp)
 
 
         self.buton3= QPushButton('Tam ekran')
@@ -81,12 +75,12 @@ class özelleştir(QMainWindow):
         kalıp.addWidget(self.buton3)
         self.buton3.clicked.connect(tam_ekran)
         pencere.setLayout(kalıp)
-        
-        pencere.show()
-        uygulama.exec()
+        self.setCentralWidget(pencere)        
 
-
-Anapencere = girişekranı()
+uygulama = QApplication([])
+Anapencere = girisekrani()
+Anapencere.show()
+uygulama.exec()
 
 
 
