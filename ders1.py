@@ -5,10 +5,17 @@ class girişekranı(QMainWindow):
         Anauygulama = QApplication([])
         Anapencere = QWidget()
         Anaekran = QVBoxLayout()
-        self.anaedit1=QPushButton('özelleştir')
-        self.anaedit1.setFixedWidth(100)
-        Anaekran.addWidget(self.anaedit1)
         
+
+        
+        def login():
+            Anapencere = özelleştir()
+            
+        self.anabuton1= QPushButton('Profil')
+        self.anabuton1.setFixedWidth(100)
+        Anaekran.addWidget(self.anabuton1)
+        self.anabuton1.clicked.connect(login)
+        Anapencere.setLayout(Anaekran)
         
         
         
@@ -78,7 +85,7 @@ class özelleştir(QMainWindow):
         uygulama.exec()
 
 
-pencere = özelleştir()
 Anapencere = girişekranı()
+
 
 
