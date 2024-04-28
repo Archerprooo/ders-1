@@ -10,6 +10,7 @@ class özelleştir(QMainWindow):
 
         uygulama = QApplication([])
         pencere =QWidget()
+        
 
 
         kalıp = QVBoxLayout()
@@ -38,7 +39,7 @@ class özelleştir(QMainWindow):
 
         pencere.setLayout(kalıp)
 
-        pencere.show()
+        pencere.showFullScreen()
         uygulama.exec()
 
 
