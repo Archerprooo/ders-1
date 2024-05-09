@@ -21,7 +21,6 @@ class girisekrani(QMainWindow):
         self.setCentralWidget(girişpenceresi)
 
 
-
 class özelleştir(QMainWindow):
     def __init__(self,xx="Başlıksız"):
         super().__init__()
